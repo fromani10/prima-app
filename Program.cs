@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Auto miaAuto;
 miaAuto = new Auto();
-miaAuto.stampa();
+miaAuto.stampaDescrizione();
 
 class Auto{
     //tipo
@@ -25,19 +25,26 @@ class Auto{
         this.tipoMotore = motore.disel;
         this.colore = "verde";
     }
-    public void stampa()
+    public void stampaDescrizione()
     {
         //stampo le caratteristiche dell auto
-        Console.WriteLine("marca: "+ this.marca);
-        Console.WriteLine("modello: "+ this.modello);
-        Console.WriteLine("motore: "+ this.tipoMotore);
-        Console.WriteLine("colore: "+ this.colore);
+       Console.WriteLine(descrizione());
+
+
 
     }
 
+    public string descrizione()
+    {
+        string result;
 
+        result = $"marca: {this.marca}";//modo diverso per scrivere
+        result +=" modello: " + this.modello;
+        result+=" motore: " + this.tipoMotore;
+        result+=" colore: " + this.colore;
+        return result;
 
-
+    }
 }
 
 
