@@ -38,9 +38,9 @@ class Auto{
     {
         string result;
 
-        result = $"marca: {this.marca}";//modo diverso per scrivere
-        result +=" modello: " + this.modello;
-        result+=" motore: " + this.tipoMotore;
+        result = $"marca: {this.marca}"+"\n";//modo diverso per scrivere
+        result +=" modello: " + this.modello+"\n";
+        result += " motore: " + this.tipoMotore + "\n";
         result+=" colore: " + this.colore;
         return result;
 
